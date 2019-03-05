@@ -90,13 +90,13 @@ anti_rotate_x_fixed_point(double *sx, double *sy, double sdst_x, char calc_new_p
         {
           x_n = x - (y >> i);
           y_n = y + (x >> i);
-          z += atan_n[i];
+          z -= atan_n[i];
         }
       else if( x < dst_x )
         {
           x_n = x + (y >> i);
           y_n = y - (x >> i);
-          z -= atan_n[i];
+          z += atan_n[i];
         }
       else
         break;

@@ -1,7 +1,7 @@
 #include <math.h>
 #include <stdio.h>
   
-#define COEFF 186413 /* = 2^24 / 90 */
+#define COEFF 93207 /* = 2^23 / 90 */
 #define N 24
 #define PI 3.141592654
 

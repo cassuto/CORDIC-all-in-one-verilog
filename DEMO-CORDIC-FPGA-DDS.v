@@ -1,9 +1,8 @@
 
-module cordic_dds
-#(
-   parameter DW = 16, /* Data width */
-   parameter PIPE_DEPTH = 14, /* Pipeline depth */
-   parameter limP = 16'h4dba /* P = 0.607253 * 2^15 */
+module cordic_dds # (
+   parameter DW = 16,               /* Data width */
+   parameter PIPE_DEPTH = 14,       /* Pipeline depth */
+   parameter limP = 16'h4dba        /* P = 0.607253 * 2^15 */
 )
 (/*AUTOARG*/
    // Outputs
@@ -13,9 +12,9 @@ module cordic_dds
 );
 
    input             clk;
-   input [DW-1:0]    phase_i; /* Phase */
-   output [DW:0]     sin_o, cos_o; /* Function value output */
-   output [DW:0]     err_o;      /* Phase Error output */
+   input [DW-1:0]    phase_i;       /* Phase */
+   output [DW:0]     sin_o, cos_o;  /* Function value output */
+   output [DW:0]     err_o;         /* Phase Error output */
 
    reg [DW:0] cos_r=0, sin_o_r=0;
    reg [DW:0] x[PIPE_DEPTH:0];

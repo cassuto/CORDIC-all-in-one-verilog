@@ -12,6 +12,14 @@ static int atan_n[N] = {
   #include "arctan-fixed.array"
 };
 
+/**
+ * CORDIC: rotate the source point by specific angle in degree.
+ * @param sx      Pointer to the X variable of source point, where to
+ *                store the result as well.
+ * @param sy      Pointer to the Y variable of source point, where to
+ *                store the result as well.
+ * @param sz      Target rotation angle.
+ */
 void
 rotate_fixed_point(double *sx, double *sy, double sz)
 {
@@ -50,6 +58,9 @@ rotate_fixed_point(double *sx, double *sy, double sz)
 #endif
 }
 
+/*
+ * Testcase entry
+ */
 #ifndef NO_TESTCASE_ROTATE_FIXED_POINT
 int
 main(void)

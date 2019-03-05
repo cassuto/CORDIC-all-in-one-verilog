@@ -11,6 +11,9 @@ arctan_fixed_point(double val)
   return anti_rotate_y_fixed_point(&x, &val, 0.0, 0/* ignore P */);
 }
 
+/*
+ * Testcase entry
+ */
 #ifndef NO_TESTCASE_ARCTAN_FIXED_POINT
 int
 main(void)

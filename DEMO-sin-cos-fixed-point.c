@@ -19,6 +19,9 @@ sin_fixed_point(double angle)
   return x; /* cos(90deg - angle) = sin(angle) */
 }
 
+/*
+ * Testcase entry
+ */
 #ifndef NO_TESTCASE_SIN_COS_FIXED_POINT
 int
 main(void)

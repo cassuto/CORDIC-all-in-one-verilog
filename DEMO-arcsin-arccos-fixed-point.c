@@ -4,22 +4,23 @@
 
 #include "CORDIC-anti-rotate-fixed-point.c" /* uglily includes other source file here */
 
-#define P 0.607253
-
 double
 arccos_fixed_point(double val)
 {
-  double x = .0, y = P;
+  double x = .0, y = 1.0;
   return anti_rotate_y_fixed_point(&x, &y, val, 0/* ignore P */);
 }
 
 double
 arcsin_fixed_point(double val)
 {
-  double x = .0, y = P;
+  double x = .0, y = 1.0;
   return anti_rotate_x_fixed_point(&x, &y, val, 0/* ignore P */);
 }
 
+/*
+ * Testcase entry
+ */
 #ifndef NO_TESTCASE_ARCSIN_ARCCOS_FIXED_POINT
 int
 main(void)

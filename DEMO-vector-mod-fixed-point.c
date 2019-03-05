@@ -11,6 +11,9 @@ vector_mod_fixed_point(double x, double y)
   return x;
 }
 
+/*
+ * Testcase entry
+ */
 #ifndef NO_TESTCASE_VECTOR_MOD_FIXED_POINT
 int
 main(void)

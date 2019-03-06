@@ -1,0 +1,33 @@
+The problem to be solved is:
+      Evaluate arbitrary mathematical functions such as
+          sin/ cos/ tan
+          arcsin/ arccos/ arctan
+          vector module
+      in a fast and fixed-point way.
+
+
+This repository contains the following core algorithms:
+
+1). CORDIC-rotate-fixed-point.c
+      Point rotation in rectangular coordinate system based on CORDIC.
+  
+2). CORDIC-anti-rotate-fixed-point.c
+      Anti-rotation for the evaluation of rotation angle.
+
+
+Other files are demos of CORDIC:
+
+1). DEMO-sin-cos-fixed-point.c
+      Evaluate sin and cos
+      
+2). DEMO-arcsin-arccos-fixed-point.c
+      Evaluate arcsin and arccos.
+      
+3). DEMO-arctan-fixed-point.c
+      Evaluate arctan.
+      
+4). DEMO-vector-mod-fixed-point.c
+      Evaluate module of vector.
+
+5). DEMO-CORDIC-FPGA-DDS.v
+      FPGA demo for evaluation of sin/cos functions.

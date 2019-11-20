@@ -3,7 +3,7 @@
   
 #define COEFF 93207 /* = 2^23 / 90 */
 #define N 24
-#define PI 3.141592654
+#define PI 3.14159265358979323846
 
 #define GEN_P_FLOAT 1
 #define GEN_ATAN_FLOAT 1

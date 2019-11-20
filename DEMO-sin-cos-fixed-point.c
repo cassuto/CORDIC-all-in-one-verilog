@@ -26,7 +26,22 @@ sin_fixed_point(double angle)
 int
 main(void)
 {
+/*
   printf("cos 45deg = %lf\n", cos_fixed_point(45.0));
-  printf("sin 30deg = %lf\n", sin_fixed_point(30.0));
+  printf("sin 39.7918deg = %lf\n", sin_fixed_point(39.7918));
+*/
+  double avg_diff=0;
+  int count=0;
+  for(double v=0; v<90; v+=0.1) {
+    double d=v/180*M_PI;
+    double diff=sin(d)-sin_fixed_point(v);
+    diff=diff<0?-diff:diff;
+    if(diff>=0.1) {
+      printf("Error. deg=%lf: sin=%lf diff:%lf\n", v, sin(d), diff);
+    }
+    avg_diff+=diff;
+    ++count;
+  }
+  printf("sin_fixed_point(), average diff=%lf\n", avg_diff/count);
 }
 #endif
